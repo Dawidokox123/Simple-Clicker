@@ -1,10 +1,10 @@
-var click = 0; //Currency
-var ACs = 0; //Autoclickers
-var CPS = 0; //Clicks per Second
+var click = 0;
+var ACs = 0;
+var CPS = 0;
 function buttonClick(number) {
     click = click + number;
     document.getElementById("clicks").innerHTML = click;
-} //Clicking func
+}
 function buyAC(numberAC) {
     var ACCost = Math.floor(10 * Math.pow(1.5, ACs));
     if (click >= ACCost) {
@@ -22,8 +22,8 @@ function buyAC(numberAC) {
     document.getElementById("ACCost").innerHTML = nextCostAC;
     console.log(ACs, click, ACCost);
 
-} //Buying Autoclickers
+}
 window.setInterval(function () {
     buttonClick(ACs);
-}, 1000); //Actions per second
+}, 1000);
 
